@@ -1,0 +1,490 @@
+{
+  "admin": [
+    {
+      "admin_name": "admin",
+      "admin_password": "1234"
+    }
+  ],
+  "subject": [
+    {
+      "subject_name": "Kinh tế chính trị",
+      "id": 1
+    },
+    {
+      "subject_name": "Lập trình web",
+      "id": 2
+    },
+	{
+      "subject_name": "Mạng máy tính",
+      "id": 3
+    }
+  ],
+  "Exam": [
+    {
+      "id": 1,
+      "exam_name": "Kinh tế chính trị",
+      "exam_desc": "Bài thi kinh tế chính trị",
+      "exam_date": "17-9-2021 17:49:39",
+      "exam_marks": "10",
+      "exam_totalQuestion": "10",
+      "exam_passMarks": "3",
+      "exam_level": "Medium"
+    },
+	{
+      "id": 2,
+      "exam_name": "Lập trình web",
+      "exam_desc": "Bài thi lập trình web",
+      "exam_date": "17-9-2021 17:49:39",
+      "exam_marks": "10",
+      "exam_totalQuestion": "10",
+      "exam_passMarks": "3",
+      "exam_level": "Easy"
+    },
+	{
+      "id": 3,
+      "exam_name": "Mạng máy tính",
+      "exam_desc": "Bài thi mạng máy tính",
+      "exam_date": "17-9-2021 17:49:39",
+      "exam_marks": "10",
+      "exam_totalQuestion": "10",
+      "exam_passMarks": "3",
+      "exam_level": "Easy"
+    }
+  ],
+  "Question": [
+    {
+      "id": 1,
+      "question_name": "Thuật ngữ khoa học “kinh tế chính trị” xuất hiện lần đầu tiên vào năm nào?",
+      "option_one": "1612",
+      "option_two": "1608",
+      "option_three": "1615",
+      "option_four": "1618",
+      "question_answer": "1615",
+      "exam_id": 1,
+      "subject_name": "Kinh tế chính trị"
+    },
+    {
+      "id": 2,
+      "question_name": "Tác phẩm “Chuyên luận về kinh tế chính trị” của tác giả nào?",
+      "option_one": "Antonie de Monchretien",
+      "option_two": "William Stafford",
+      "option_three": "William Petty",
+      "option_four": "Thomas Mun",
+      "question_answer": "Antonie de Monchretien",
+      "exam_id": 1,
+      "subject_name": "Kinh tế chính trị"
+    },
+    {
+      "id": 3,
+      "question_name": "Kinh tế chính trị chính thức trở thành một môn khoa học vào thời gian nào?",
+      "option_one": "Thế kỉ XVI",
+      "option_two": "Thế kỉ XVII",
+      "option_three": "Thế kỉ XVIII",
+      "option_four": "Thế kỉ XIX",
+      "question_answer": "Thế kỉ XVIII",
+      "exam_id": "1",
+      "subject_name": "Kinh tế chính trị"
+    },
+    {
+      "id": 4,
+      "question_name": "Chủ nghĩa trọng thương ra đời vào thời kỳ:",
+      "option_one": "Tích lũy tư bản",
+      "option_two": "Tích lũy nguyên thủy tư bản chủ nghĩa",
+      "option_three": "Chủ nghĩa tư bản tự do cạnh tranh",
+      "option_four": "Chủ nghĩa tư bản độc quyền",
+      "question_answer": "Tích lũy nguyên thủy tư bản chủ nghĩa",
+      "exam_id": "1",
+      "subject_name": "Kinh tế chính trị"
+    },
+    {
+      "id": 5,
+      "question_name": "Mọi hàng hóa đều là sản phẩm của lao động và mọi sản phẩm của lao động đều là hàng hoá. Nhận định trên đúng hay sai:",
+      "option_one": "Đúng",
+      "option_two": "Sai",
+      "question_answer": "Sai",
+      "exam_id": "1",
+      "subject_name": "Kinh tế chính trị"
+    },
+    {
+      "id": 6,
+      "question_name": "Hình thức kinh tế đầu tiên của xã hội loài người là:",
+      "option_one": "Kinh tế hàng hóa",
+      "option_two": "Kinh tế tự nhiên",
+      "option_three": "Kinh tế cá thể",
+      "option_four": "Kinh tế thị trường",
+      "question_answer": "Kinh tế tự nhiên",
+      "exam_id": "1",
+      "subject_name": "Kinh tế chính trị"
+    },
+    {
+      "id": 7,
+      "question_name": "Giá trị của hàng hóa là:",
+      "option_one": "Tính quý hiếm của sản phẩm",
+      "option_two": "Hao phí lao động xã hội kết tinh",
+      "option_three": "Mức độ được ưa chuộng của sản phẩm",
+      "option_four": "Tính có ích của đồ vật",
+      "question_answer": "Hao phí lao động xã hội kết tinh",
+      "exam_id": "1",
+      "subject_name": "Kinh tế chính trị"
+    },
+    {
+      "id": 8,
+      "question_name": "Hãy chỉ ra tác động tiêu cực của độc quyền?",
+      "option_one": "Thúc đẩy tiến bộ kỹ thuật",
+      "option_two": "Góp phần thúc đẩy nền kinh tế phát triển theo hướng sản xuất lớn hiện đại",
+      "option_three": "Tăng năng suất lao động",
+      "option_four": "Phá vỡ cạnh tranh hoàn hảo gây thiệt hại cho người tiêu dùng và xã hội",
+      "question_answer": "Phá vỡ cạnh tranh hoàn hảo gây thiệt hại cho người tiêu dùng và xã hội",
+      "exam_id": "1",
+      "subject_name": "Kinh tế chính trị"
+    },
+    {
+      "id": 9,
+      "question_name": "Tính 2 mặt của lao động sản xuất hàng hoá do ai phát hiện ra?",
+      "option_one": "Adam Smith",
+      "option_two": "Karl Marx",
+      "option_three": "Friedrich Engels",
+      "option_four": "David Ricardo",
+      "question_answer": "Karl Marx",
+      "exam_id": "1",
+      "subject_name": "Kinh tế chính trị"
+    },
+    {
+      "id": 10,
+      "question_name": "Giá cả hàng hoá được quyết định trước hết bởi:",
+      "option_one": "Công dụng của nó",
+      "option_two": "Giá trị hàng hoá",
+      "option_three": "Tính khan hiếm của nó",
+      "option_four": "Quy luật cung cầu trong nền kinh tế",
+      "question_answer": "Giá trị hàng hoá",
+      "exam_id": "1",
+      "subject_name": "Kinh tế chính trị"
+    },
+	{
+        "id": 1,
+        "question_name": "JavaScript là ngôn ngữ xử lý ở:",
+        "option_one": "Client",
+        "option_two": "Server",
+        "option_three": "Server/client",
+        "option_four": "Không có dạng nào.",
+        "question_answer": "Server/client",
+        "exam_id": 2,
+        "subject_name": "Lập trình web"
+    },
+    {
+        "id": 2,
+        "question_name": "JavaScript là ngôn ngữ thông dịch hay biên dịch",
+        "option_one": "Thông dịch",
+        "option_two": "Biên dịch",
+        "option_three": "Cả hai dạng",
+        "option_four": "Không có dạng nào ở trên",
+        "question_answer": "Thông dịch",
+        "exam_id": 2,
+        "subject_name": "Lập trình web"
+    },
+    {
+        "id": 3,
+        "question_name": "Phương thức viết chương trình của JavaScript như thế nào?",
+        "option_one": "Viết riêng một trang",
+        "option_two": "Viết chung với HTML",
+        "option_three": "Cả hai dạng A và B",
+        "option_four": "Không có dạng nào.",
+        "question_answer": "Cả hai dạng A và B",
+        "exam_id": "1",
+        "subject_name": "Lập trình web"
+    },
+    {
+        "id": 4,
+        "question_name": "JavaScript là ngôn ngữ kịch bản có dấu được mã nguồn không?",
+        "option_one": "Không dấu được vì các kịch bản chạy ở client.",
+        "option_two": "Dấu được vì chương trình hoạt động độc lập với trình duyệt",
+        "option_three": "Hai phát biểu đều sai.",
+        "option_four": "Hai phát biểu đều đúng",
+        "question_answer": "Dấu được vì chương trình hoạt động độc lập với trình duyệt",
+        "exam_id": "1",
+        "subject_name": "Lập trình web"
+    },
+    {
+        "id": 5,
+        "question_name": "CSS là viết tắt của gì?",
+        "option_one": "Computer Style Sheets",
+        "option_two": "Creative Style Sheets",
+        "option_three": "Cascading Style Sheets",
+        "option_four": "Complex Style Sheets",
+        "question_answer": "Cascading Style Sheets",
+        "exam_id": "1",
+        "subject_name": "Lập trình web"
+    },
+    {
+        "id": 6,
+        "question_name": "JavaScript có các dạng biến?",
+        "option_one": "Number, String, Boolean",
+        "option_two": "Number, Integer, char",
+        "option_three": "Number, String, Boolean, Null",
+        "option_four": "Tất cả các loại trên.",
+        "question_answer": "Number, Integer, char",
+        "exam_id": "1",
+        "subject_name": "Lập trình web"
+    },
+    {
+        "id": 7,
+        "question_name": "Trong JavaScript hàm parseInt() dùng để làm gì?",
+        "option_one": "Chuyển một chuỗi thành số",
+        "option_two": "Chuyển một chuỗi thành số nguyên",
+        "option_three": "Chuyển một chuỗi thành số thực",
+        "option_four": "Chuyển một số nguyên thành một chuỗi",
+        "question_answer": "Chuyển một chuỗi thành số nguyên",
+        "exam_id": "1",
+        "subject_name": "Lập trình web"
+    },
+    {
+        "id": 8,
+        "question_name": "Trong JavaScript hàm parseFloat() dùng để làm gì?",
+        "option_one": "Chuyển một chuỗi thành số",
+        "option_two": "Chuyển một chuỗi thành số thực",
+        "option_three": "Chuyển một chuỗi thành số nguyên",
+        "option_four": "Chuyển một số nguyên thành một chuỗi",
+        "question_answer": "Chuyển một số nguyên thành một chuỗi",
+        "exam_id": "1",
+        "subject_name": "Lập trình web"
+    },
+    {
+        "id": 9,
+        "question_name": "Lệnh prompt trong JavaScript để làm gì?",
+        "option_one": "Hiện một thông báo nhập thông tin",
+        "option_two": "Hiện một thông báo dạng yes, No",
+        "option_three": "Cả hai dạng trên",
+        "option_four": "Không có lệnh nào đúng",
+        "question_answer": "Hiện một thông báo dạng yes, No",
+        "exam_id": "1",
+        "subject_name": "Lập trình web"
+    },
+    {
+        "id": 10,
+        "question_name": "Trong JavaScript sự kiện Onload thực hiện khi:",
+        "option_one": "Khi bắt đầu chương trình chạy",
+        "option_two": "Khi click chuột",
+        "option_three": "Khi kết thúc một chương trình",
+        "option_four": "Khi di chuyển chuột qua.",
+        "question_answer": "Khi click chuột",
+        "exam_id": "1",
+        "subject_name": "Lập trình web"
+    },
+	{
+      "id": 1,
+      "question_name": "Giao thức được sử dụng phổ biến trên Internet là?",
+      "option_one": "Ethernet",
+      "option_two": "TCP/IP",
+      "option_three": "OSI",
+      "option_four": "IEEE",
+      "question_answer": "TCP/IP",
+      "exam_id": "1",
+      "subject_name": "Mạng máy tính"
+    },
+    {
+      "id": 2,
+      "question_name": "Hub là thiết bị hoạt động ở tầng nào của mô hình OSI?",
+      "option_one": "Tầng Data Link",
+      "option_two": "Tầng Network",
+      "option_three": "Tầng Transport",
+      "option_four": "Tầng Vật lý",
+      "question_answer": "Tầng Vật lý",
+      "exam_id": "3",
+      "subject_name": "Mạng máy tính"
+    },
+    {
+      "id": 3,
+      "question_name": "Một Hub tốc độ 100Mbps có 12 cổng thì tốc độ của mỗi cổng sẽ là?",
+      "option_one": "Tối đa 100Mbps khi có 12 máy tính cắm vào Hub",
+      "option_two": "Tối thiểu 100Mbps khi chỉ có một máy tính cắm vào Hub",
+      "option_three": "Tối đa 100Mbps khi chỉ có một máy tính cắm vào Hub",
+      "option_four": "Tối thiểu 8.3Mbps khi có 12 máy tính cắm vào Hub",
+      "question_answer": "Tối đa 100Mbps khi chỉ có một máy tính cắm vào Hub",
+      "exam_id": "3",
+      "subject_name": "Mạng máy tính"
+  
+    },
+    {
+      "id": 4,
+      "question_name": "NIC là thiết bị hoạt động ở lớp nào của mô hình OSI?",
+      "option_one": "Lớp 4",
+      "option_two": "Lớp 3",
+      "option_three": "Lớp 2",
+      "option_four": "Lớp 1",
+      "question_answer": "Lớp 1",
+      "exam_id": "3",
+      "subject_name": "Mạng máy tính"
+    },
+    {
+      "id": 5,
+      "question_name": "Switch là thiết bị hoạt động ở lớp nào của mô hình OSI?",
+      "option_one": "Lớp 4",
+      "option_two": "Lớp 3",
+      "option_three": "Lớp 2",
+      "option_four": "Lớp 1",
+      "question_answer": "Lớp 2",
+      "exam_id": "3",
+      "subject_name": "Mạng máy tính"
+    },
+    {
+      "id": 6,
+      "question_name": "Topo thường dùng hiện nay trong các mạng LAN là?",
+      "option_one": "Ethernetbus",
+      "option_two": "Token Ring",
+      "option_three": "Token bus",
+      "option_four": "Bus",
+      "question_answer": "Ethernetbus",
+      "exam_id": "3",
+      "subject_name": "Mạng máy tính"
+    },
+    {
+      "id": 7,
+      "question_name": "Để kết nối trực tiếp hai máy tính với nhau ta có thể dùng?",
+      "option_one": "Rollover Cable",
+      "option_two": "Cáp chéo (Cross-Cable)",
+      "option_three": "Cáp thẳng (Straight Cable)",
+      "option_four": "Không có loại nào kể trên",
+      "question_answer": "Rollover Cable",
+      "exam_id": "3",
+      "subject_name": "Mạng máy tính"
+    },
+    {
+      "id": 8,
+      "question_name": "Mô hình phân lớp OSI có bao nhiêu lớp?",
+      "option_one": "2",
+      "option_two": "3",
+      "option_three": "5",
+      "option_four": "7",
+      "question_answer": "7",
+      "exam_id": "3",
+      "subject_name": "Mạng máy tính"
+    },
+    {
+      "id": 9,
+      "question_name": "Các đơn vị dữ liệu giao thức trong mô hình OSI được gọi là?",
+      "option_one": "Frame",
+      "option_two": "Packet",
+      "option_three": "PDU",
+      "option_four": "CSU",
+      "question_answer": "CSU",
+      "exam_id": "3",
+      "subject_name": "Mạng máy tính"
+    },
+    {
+      "id": 10,
+      "question_name": "Thứ tự đóng gói dữ liệu khi truyền qua mô hình OSI là?",
+      "option_one": "Data, Segment, Packet, Frame, Bit",
+      "option_two": "Data, Segment, Frame, Packet, Bit",
+      "option_three": "Data, Packet, Segment, Bit, Frame",
+      "option_four": "Data, Packet, Segment, Frame, Bit",
+      "question_answer": "Data, Segment, Packet, Frame, Bit",
+      "exam_id": "3",
+      "subject_name": "Mạng máy tính"
+    }
+  ],
+  "Result": [
+        {
+      "id": 1,
+      "result_status": "Pass",
+      "result_score": "4",
+      "user_email": "anhtus@gmail.com",
+      "exam_date": "12-23-12",
+      "exam_name": "Kinh tế chính trị",
+      "total_marks": "10",
+      "exam_id": "1",
+      "total_Question": "10"
+    },
+    {
+      "id": 2,
+      "result_status": "Pass",
+      "result_score": "6",
+      "user_email": "anhtus@gmail.com",
+      "exam_date": "12-23-12",
+      "exam_name": "Kinh tế chính trị",
+      "total_marks": "10",
+      "exam_id": "1",
+      "total_Question": "10"
+    },
+    {
+      "id": 3,
+      "result_status": "Pass",
+      "result_score": "7",
+      "user_email": "tung@gmail.com",
+      "exam_date": "12-23-12",
+      "exam_name": "Kinh tế chính trị",
+      "total_marks": "10",
+      "exam_id": "1",
+      "total_Question": "10"
+    },
+    {
+      "result_status": "Pass",
+      "result_score": 3,
+      "user_email": "anhtus@gmail.com",
+      "exam_date": "18-9-2021 20:49:39",
+      "exam_name": "Kinh tế chính trị",
+      "total_marks": "10",
+      "exam_id": "1",
+      "total_Question": "10",
+      "id": 4
+    },
+    {
+      "result_status": "Pass",
+      "result_score": 9,
+      "user_email": "kien@gmail.com",
+      "exam_date": "19-9-2021 15:11:27",
+      "exam_name": "Kinh tế chính trị",
+      "total_marks": "10",
+      "exam_id": "1",
+      "total_Question": "10",
+      "id": 5
+    },
+    {
+      "result_status": "Pass",
+      "result_score": 10,
+      "user_email": "khoa@gmail.com",
+      "exam_date": "19-9-2021 15:20:37",
+      "exam_name": "Kinh tế chính trị",
+      "total_marks": "10",
+      "exam_id": "1",
+      "total_Question": "10",
+      "id": 6
+    },
+    {
+      "result_status": "Pass",
+      "result_score": 6,
+      "user_email": "anhtus@gmail.com",
+      "exam_date": "9-1-2022 11:29:34",
+      "exam_name": "Kinh tế chính trị",
+      "total_marks": "10",
+      "exam_id": "1",
+      "total_Question": "10",
+      "id": 7
+    }
+  ],
+  "user": [
+    {
+      "id": 1,
+      "user_name": "Tú",
+      "user_email": "anhtus@gmail.com",
+      "user_password": "1234"
+    },
+    {
+      "id": 2,
+      "user_name": "Tùng",
+      "user_email": "tung@gmail.com",
+      "user_password": "1234"
+    },
+    {
+      "user_name": "Kiên",
+      "user_email": "kien@gmail.com",
+      "user_password": "123",
+      "id": 3
+    },
+    {
+      "user_name": "Khoa",
+      "user_email": "khoa@gmail.com",
+      "user_password": "123",
+      "id": 4
+    }
+  ]
+}
