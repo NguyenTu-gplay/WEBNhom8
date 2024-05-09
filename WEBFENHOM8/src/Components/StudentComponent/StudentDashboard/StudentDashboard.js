@@ -1,3 +1,4 @@
+
 import {NavLink , Switch , Route , BrowserRouter , useHistory} from "react-router-dom";
 
 import { useEffect } from "react";
@@ -9,7 +10,7 @@ import { useEffect } from "react";
  import Result from "./ResultComponent/Result";
 import Exam from "./ExamComponent/Exam";
 import Test from "./TestComponent/Test";
-import React, { Component }  from 'react';
+//import React, { Component }  from 'react';
 
 
 

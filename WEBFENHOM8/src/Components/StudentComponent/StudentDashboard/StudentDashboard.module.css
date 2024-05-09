@@ -7,7 +7,7 @@ body{
 
 #header{
     /* background-color: #2e6da4dc; */
-    background-color: rgba(192, 0, 0, 0.801);
+    background-color: #9B0000;
     
     float: top;
     height: 50px;
@@ -83,22 +83,21 @@ body{
 
 
   #displayBox{
-        margin: 0 auto;
         width: 95%;
         background: #FFFFFF;
         border-radius: 10px;
         overflow: hidden;
         display: flex;
         flex: 1 1 100%;
-        align-items: stretch;
-        justify-content: space-between;
+        justify-items: center;
+        align-items:normal;
+        display: flex;
         box-shadow: 0 0 20px 6px #090b6f85;
         position: fixed;
-        inset: 0px;
         height: 80%;
         max-width: 100vw;
         max-height: 100dvh;
-        margin: auto;
+        margin: 2.5%;
   }
 
 
@@ -108,7 +107,9 @@ body{
   #displayBoxHeadingBox{
       float: left;
       width: 100%;
+      height: min-content;
       margin-top: 1%;
+      align-items: normal;
   }
 
 
@@ -118,73 +119,90 @@ body{
   }
 
 
+  #subjectContainer{
+    width: 100%;
+    height: 30vmax;
+    float: left;
+    margin-top: 1vmax;
+    display: inline-grid;
+    align-items: normal;
+    justify-content: center;
+    overflow:hidden; overflow-y:scroll;
+  }
 
   #displayBoxSubjectBox{
-     background-color: whitesmoke;
-
-     border: 1px solid black;
+     background-color: white;
+     /* border: 1px solid black; */
      float: left;
-     width:350px;
-     height: 140px;
-
-     margin-top: 20px;
-     margin-left: 60px;
+     width: 85vmax;
+     height: 4vmax;
+     border-radius: 35px;
+     border: 3px solid rgb(0, 0, 0);
+     display: flex;
+     margin-top: 3%;
+     justify-content: space-between;
   }
 
 
   #subjectText{
      float: left;
-     width:100%;
-     height: 50%;
-     border-bottom: 1px solid black;
+     width:min-content;
+     height: 100%;
      text-align: center;
+     margin-left: 3%;
+     font-weight: bold;
   }
 
 
   #subjectText span{
-      font-size: 23px;
-      position: relative;
-      top: 23px;
-  }
+      font-size: 25px;
+      height: 100%;
+      display: block;
+      text-align: center;
+      margin-top: 25%;
+      font-weight: bold;
+    }
 
 
   #subjectButton{
-     float: left;
-     width:100%;
-     height: 50%;
+     float: right;
+     width:max-content;
+     height: 100%;
      text-align: center;
   }
 
   #subjectButton button{
-     font-size: 17px;
+     font-size: 20px;
      position: relative;
-     top: 17px;
      color:#fff;
-     background-color:#337ab7;
-     height: 35px;
-     border-radius: 7px;
+     background-color:#9B0000;
+     height: 100%;
+     width: 12vmax;
+     border-radius: 30px;
      padding: 6px 12px;
      cursor: pointer;
-     border: 1px solid transparent;    
+     border: 1px solid #9B0000;    
+     float: right;
+     font-weight: bold;
   }
 
 
      /* ----------------------- Result css ------------------------------------- */
 
-  
 
-      #displayHeadingBox h2{
-      margin-left: 10px;
-      font-size: 30px;
-     /* background-color: yellow; */
-   }
+#displayHeadingBox h2{
+margin-left: 3%;
+}
 
-
-
+#resultContainer{
+  width: 200%;
+  height: 100vmax;
+  margin-left: 10%;
+}
 
 #tableBox{
    /* background-color: cyan; */
-   width: 1120px;
+   width: 100%;
    float:left;
    margin-left: 10px;
    font-size: 20px;
@@ -229,38 +247,38 @@ body{
 
     #displayBoxExamBox{
      
-       border: 1px solid black;
-       float: left;
-       width:350px;
-       min-height: 240px;
-
-       margin-top: 20px;
-       margin-left: 60px;
+      background-color: white;
+      /* border: 1px solid black; */
+      float: left;
+      width: 85vmax;
+      height: 9vmax;
+      border-radius: 35px;
+      border: 3px solid rgb(0, 0, 0);
+      display: flex;
+      margin-top: 3%;
+      justify-content: space-between;
     }
 
+    #examContainer{
+      width: 100%;
+      height: 30vmax;
+      float: left;
+      margin-top: 1vmax;
+      display: inline-grid;
+      align-items: normal;
+      justify-content: center;
+      overflow:hidden; overflow-y:scroll;
+    }
     #div1{
-        width: 100%;
-        min-height: 60px;
-        background-color: whitesmoke;
-        float: left;
+      margin-left: 2%;
+      margin-top: 1%;
     }
-
-
-      #div1 span{
-       font-size: 25px;
-       position: relative;
-       top: 15px;
-      }
 
     #div2,#div3,#div4{
         width: 100%;
         min-height: 40px;
         float: left;
     }
-
-    #div1,#div2,#div3,#div4{
-       border-bottom: 1px solid black ;
-   }
 
 
    #div2 span , #div3 span , #div4 span{
@@ -273,24 +291,27 @@ body{
 
       #div5{
         text-align: center;
-         width: 100%;
+        width: 100%;
         min-height: 60px;
         float: left;
       }
 
         
       #div5 button{
-       font-size: 17px;
-       position: relative;
-       top: 11px;
-       color:#fff;
-       background-color:#337ab7;
-       height: 35px;
-       border-radius: 7px;
-       padding: 6px 12px;
-       cursor: pointer;
-        border: 1px solid transparent;
-         
+        font-size: 20px;
+        position: relative;
+        color:#fff;
+        background-color:#9B0000;
+        height: 35%;
+        width: 12vmax;
+        border-radius: 30px;
+        padding: 6px 12px;
+        cursor: pointer;
+        border: 1px solid #9B0000;    
+        float: right;
+        font-weight: bold;
+        margin-top: 5%;
+        margin-right: 5%;
       }
 
 
@@ -299,28 +320,55 @@ body{
 
    
 
-      #displayBoxQuestionHeadingBox{
-       /* background-color: cyan; */
-       float: left;
-       width: 1100px;
-       height:50px;
-       border-bottom: 1px solid black;
-       margin-left:70px ;
+   #displayBoxQuestionHeadingBox{
+       width: 100%;
+       height:100%;
+       display: grid;
+       align-items: top;
+       justify-content: center;
    }
 
     #displayBoxQuestionHeadingBox h1{
-          margin: 0px;
+        width: 100%;
      }
 
+     
+    #testContainer{
+      display: flex;
+      align-items: stretch;
+      width: 100%;
+      margin-bottom: 2%;
+    }
 
+    #testContainerLeft{
+      display: inline-grid;
+      align-items: left;
+      justify-content: left;
+      width: 60vmax;
+      overflow: hidden;
+      overflow-y: scroll;
+    }
+
+    #testContainerLeft, #testContainerRight{
+      float: left;
+      box-sizing: border-box;
+    }
+
+    #testContainerRight{
+      width: 30vmax;
+      border-left: black solid 3px;
+      display: grid;
+       align-items: center;
+       justify-content: center;
+    }
    #displayBoxQuestionBox{
       /* background-color: yellow; */
       float: left;
-      width:1100px;
+      width:60vmax;
       margin-top: 20px;
       margin-left: 70px;
 
-      border-bottom: 1px solid black;
+      border-bottom: black solid 3px;
    }
 
 
@@ -346,34 +394,58 @@ body{
           font-size: 16px;
       }
 
+      #questionNumberContainer{
+        height: 20vmax;
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto;
+        justify-content: top;
+        align-items: top; 
+      }
 
+      #questionNumberRow{
+          display: flex;
+          margin-bottom: 10%;
+      }
 
+      #questionNumber{
+        border: black solid 3px;
+        border-radius: 5px;
+        width: 2vmax;
+        height: 2vmax;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 5px; 
+      }
 
+      #timer{
+        font-size: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center; 
+        height:5vmax;
+      }
 
      #submitExam{
-        width: 1100px;
-        float: left;
-
-        margin-left: 70px;
-        margin-top: 20px;
-        margin-bottom:40px;
+        width: 10vmax;
+        display: flex;
+        justify-content: center;
+        align-items: center; 
+        margin-left: 1vmax;
      }
 
        
      #submitExam button{
-      font-size: 17px;
-      position: relative;
-      top: 11;
+      font-size: 30px;
+      font-weight: bold;
       color:#fff;
-      background-color:#337ab7;
-      height: 35px;
-      border-radius: 7px;
-      padding: 6px 12px;
+      background-color:#D00000;
+      height: 3vmax;
+      border-radius: 30px;
       cursor: pointer;
-       border: 1px solid transparent;
-        
+      border: 1px solid transparent;
+      width: 20%;
+      position: absolute;
+      bottom: 10%;
      }
-
-
-  
-

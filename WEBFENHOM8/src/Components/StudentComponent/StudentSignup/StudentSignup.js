@@ -9,7 +9,7 @@ import { useState } from "react";
  import style from "./StudentSignup.module.css";
 
  import baseUrl from "../../baseUrl";
- import React, { Component }  from 'react';
+// import React, { Component }  from 'react';
 
 
 function StudentSignup() {
