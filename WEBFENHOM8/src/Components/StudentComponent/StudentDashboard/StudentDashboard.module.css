@@ -195,7 +195,7 @@ margin-left: 3%;
 }
 
 #resultContainer{
-  width: 200%;
+  width: 20%;
   height: 100vmax;
   margin-left: 10%;
 }
@@ -333,43 +333,35 @@ margin-left: 3%;
      }
 
      
-    #testContainer{
-      display: flex;
-      align-items: stretch;
-      width: 100%;
-      margin-bottom: 2%;
-    }
+#testContainer {
+  display: flex;
+  align-items: stretch;
+  width: 100%;
+  margin-bottom: 2%;
+}
 
-    #testContainerLeft{
-      display: inline-grid;
-      align-items: left;
-      justify-content: left;
-      width: 60vmax;
-      overflow: hidden;
-      overflow-y: scroll;
-    }
+#testContainerLeft {
+  display: grid; /* Sử dụng grid để kiểm soát bố cục tốt hơn */
+  align-items: left;
+  justify-content: left;
+  width: 60vmax; /* Đảm bảo chiều rộng được xác định */
+  overflow-y: scroll; /* Bật cuộn dọc */
+  height: calc(100vh - 200px); /* Đặt chiều cao phù hợp (điều chỉnh nếu cần) */
+}
 
-    #testContainerLeft, #testContainerRight{
-      float: left;
-      box-sizing: border-box;
-    }
+#testContainerRight {
+  width: 30vmax;
+  border-left: black solid 3px;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+}
 
-    #testContainerRight{
-      width: 30vmax;
-      border-left: black solid 3px;
-      display: grid;
-       align-items: center;
-       justify-content: center;
-    }
-   #displayBoxQuestionBox{
-      /* background-color: yellow; */
-      float: left;
-      width:60vmax;
-      margin-top: 20px;
-      margin-left: 70px;
-
-      border-bottom: black solid 3px;
-   }
+#displayBoxQuestionBox {
+  width: 100%; /* Khớp với chiều rộng của #testContainerLeft */
+  margin-top: 20px;
+  border-bottom: black solid 3px;
+}
 
 
    #divQuestion{
@@ -394,13 +386,13 @@ margin-left: 3%;
           font-size: 16px;
       }
 
-      #questionNumberContainer{
-        height: 20vmax;
+      #questionNumberContainer {
+        height: 20vmax; /* Giữ nguyên chiều cao container */
         display: flex;
-        flex-direction: column;
-        margin: 0 auto;
-        justify-content: top;
-        align-items: top; 
+        flex-wrap: wrap; /* Quấn các nút thành nhiều hàng */
+        justify-content: space-around; /* Phân phối các nút đều đặn (tùy chọn) */
+        align-items: center; /* Căn giữa các nút theo chiều dọc trong container */
+        margin: 0 auto; /* Căn giữa container theo chiều ngang */
       }
 
       #questionNumberRow{
@@ -408,17 +400,18 @@ margin-left: 3%;
           margin-bottom: 10%;
       }
 
-      #questionNumber{
+      #questionNumber {
         border: black solid 3px;
         border-radius: 5px;
-        width: 2vmax;
-        height: 2vmax;
+        width: 2vmax; /* Điều chỉnh chiều rộng nếu cần */
+        height: 2vmax; /* Điều chỉnh chiều cao nếu cần */
         display: flex;
         justify-content: center;
         align-items: center;
-        margin: 5px; 
+        margin: 5px; /* Thêm khoảng cách giữa các nút */
+        cursor: pointer; /* Biểu thị nút có thể nhấp chuột */
       }
-
+     
       #timer{
         font-size: 50px;
         display: flex;
@@ -432,7 +425,8 @@ margin-left: 3%;
         display: flex;
         justify-content: center;
         align-items: center; 
-        margin-left: 1vmax;
+        margin-left: 4vmax;
+        
      }
 
        
@@ -449,3 +443,4 @@ margin-left: 3%;
       position: absolute;
       bottom: 10%;
      }
+     

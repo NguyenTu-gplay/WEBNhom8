@@ -41,7 +41,7 @@ function Result() {
                                  <th id={style.center}>Result Status</th>
                                  <th id={style.center}>Your Score</th>
                                  <th id={style.center}>Total Marks</th>
-                                 <th id={style.center}>Total Question</th> 
+                                 <th id={style.center}>Total Time</th> 
                      </tr>
                  </thead>
                  <tbody >
@@ -56,7 +56,7 @@ function Result() {
                                          <td>{data.status}</td>
                                          <td>{data.score}</td>
                                          <td>{data.totalMarks}</td>
-                                         <td>{data.totalQuestion}</td>
+                                         <td>{data.totalTime}</td>
                                        </tr>
                                  );
 

@@ -2,7 +2,7 @@
 
 import axios from "axios";
 
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { useHistory, useParams } from "react-router-dom";
 
 import style from "../StudentDashboard.module.css";
@@ -16,19 +16,34 @@ function Test() {
     let { category } = useParams();
 
     const [allQuestions , setAllQuestions] = useState([]);
-
-
+    const [remainingTime, setRemainingTime] = useState();
+    let timeAll = useState();
+    useEffect(() => {
+        async function getExamTotalTime() {
+          try {
+            const response = await axios.get(`${baseUrl}/exam/${id}`);
+            const totalTime = response.data.totalTime;
+            timeAll = totalTime;
+            console.log(timeAll);
+            setRemainingTime(totalTime);
+          } catch (error) {
+            console.error("Error fetching exam total time:", error);
+          }
+        }
+        getExamTotalTime();
+      }, []);   
 
     useEffect(() => {
         async function getAllQuestions(){
             let value = await axios.get(`${baseUrl}/exam/${id}/question`);
             setAllQuestions(value.data);
-            //console.log(value.data);
+            console.log(value.data);
         }
         getAllQuestions();
     },[id]);
-
-    // ---------------------------------------------------------
+   
+   
+     // ---------------------------------------------------------
     
     // const [userAnswer , setUserAnswer] = useState({
     //     answer1:"",
@@ -59,8 +74,42 @@ function Test() {
     let count = 0;
 
     
+    const questionRefs = useRef({});
+    const startTimer = () => {
+        // Giảm thời gian còn lại sau mỗi giây
+        const timer = setInterval(() => {
+          setRemainingTime((prevTime) => {
+            if (prevTime <= 0) {
+              clearInterval(timer);
+              submitTest(); // Gọi hàm nộp bài kiểm tra khi thời gian hết
+              return 0;
+            }
+            return prevTime - 1;
+          });
+        }, 1000);
+       
+      };
+      const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
+      const currentQuestionElement = questionRefs.current[currentQuestionIndex];
+      if (currentQuestionElement) {
+          console.log(currentQuestionElement);
+        currentQuestionElement.scrollIntoView({ behavior: 'smooth' });
+      }
+    const formatTime = (time) => {
+        const minutes = Math.floor(time / 60);
+        const seconds = time % 60;
+        return `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+    };
+    useEffect(() => {
+  startTimer(); // Gọi hàm startTimer để bắt đầu đếm ngược khi component được render
+    }, []);
 
 
+    
+    
+    const navigateToQuestion = (questionIndex) => {
+        setCurrentQuestionIndex(questionIndex);
+    };
     async function submitTest()
     {
         let score = 0;
@@ -90,7 +139,8 @@ function Test() {
             "sname": { "name": category },   // --  subject name
             "totalMarks": 10,
             "examId": { "id": id },         // exam id
-            "totalQuestion": allQuestions.length
+            "totalQuestion": allQuestions.length,
+            "totalTime": timeAll - remainingTime
         };
 
        //console.log(data);
@@ -112,7 +162,7 @@ function Test() {
                                     allQuestions.map((data , i) => {
                                             count++;
                                         return (
-                                            <div id={style.displayBoxQuestionBox} key={i}>
+                                            <div id={style.displayBoxQuestionBox} key={i} ref={(el) => (questionRefs.current[i] = el)}>
                                             <div id={style.divQuestion}> <span>{data.qname}</span> </div>
                             
                                             <div>
@@ -145,21 +195,13 @@ function Test() {
                                 }
                     </div>
                     <div id={style.testContainerRight}>
-                        <div id={style.timer}>30:00</div>
-                        <div id={style.questionNumberContainer}>
-                               
-                                <div id={style.questionNumberRow}>
-                                     <div id={style.questionNumber}>1</div>
-                                    <div id={style.questionNumber}>1</div>
-                                    <div id={style.questionNumber}>1</div>
-                                    <div id={style.questionNumber}>1</div>
-                                </div>
-                                <div id={style.questionNumberRow}>
-                                     <div id={style.questionNumber}>1</div>
-                                    <div id={style.questionNumber}>1</div>
-                                    <div id={style.questionNumber}>1</div>
-                                    <div id={style.questionNumber}>1</div>
-                                </div>
+                    <div id={style.timer}>{formatTime(remainingTime)}</div>
+                        <div id={style.questionNumberContainer}>        
+                        {allQuestions.map((_, i) => (
+                        <button id ={style.questionNumber} key={i} onClick={() => navigateToQuestion(i)}>
+                            {i + 1}
+                        </button>
+                        ))}
                         </div>
                         <div id={style.submitExam}><button onClick={submitTest}>Submit</button></div>
                     </div>            

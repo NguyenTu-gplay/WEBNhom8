@@ -1,3 +1,5 @@
+
+
 import style from "./StudentLogin.module.css";
 
 import {NavLink , useHistory} from "react-router-dom";
@@ -5,6 +7,7 @@ import {NavLink , useHistory} from "react-router-dom";
  import {useState} from "react" ;
  import axios from "axios";
  import baseUrl from "../../baseUrl";
+ //import React, { Component }  from 'react';
 
 
    function StudentLogin(){
@@ -28,12 +31,7 @@ import {NavLink , useHistory} from "react-router-dom";
     async function handleLogin()
      {
         let value  = await axios.get(`${baseUrl}/user/${user.email}`);
-
-        //console.log(value.data.email);
-        //console.log(user.email);
-
-        //console.log(value.data.password);
-        //console.log(user.password);
+        
 
               if( value.data.email === user.email &&
                  value.data.password === user.password)
@@ -43,44 +41,41 @@ import {NavLink , useHistory} from "react-router-dom";
                  history.push("/StudentDashboard");
               }
               else alert(" Wrong User Email or password");
-
+           
       }
+      
+
        return(
-          <div id={style.container}>
-
-              <div id={style.containerHeadingBox}>
-                  <h1>Student Login</h1>
-              </div>
-
-              <div id={style.emailBox}>
-                  <label htmlFor="email">
-                      Email
-                      <input name="email"
-                             onChange={(e) => onTextFieldChange(e)} type="text" id={style.email} />
-                  </label>
-              </div>
+          <>
+          <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet"></link><div id={style.boxForm}>
+               <div id={style.boxFormLeft}>
+                   <div id={style.boxFormLeftOverlay}></div>
+               </div>
 
 
-              <div id={style.passwordBox}>
-                  <label htmlFor="password">
-                      Password
-                      <input name="password"
-                             onChange={(e) => onTextFieldChange(e)} type="password" id={style.password} />
-                  </label>
-              </div>
+               <div id={style.boxFormRight}>
+                   <h5>Đăng Nhập</h5>
+                   <div id={style.LoginForm}>
+                       <p>Chưa có tài khoản? <NavLink exact to="/StudentSignup"> Đăng ký</NavLink> chỉ mất vài phút thôi</p>
+                       
+                       <div className="inputs">
+                           <input name="email" placeholder="Tài khoản"
+                              onChange={(e) => onTextFieldChange(e)} type="text" id={style.email} />
+                           <br></br>
+                           <input name="password" placeholder="Mật khẩu"
+                              onChange={(e) => onTextFieldChange(e)} type="password" id={style.password} />
+                       </div>
 
+                       <br></br>
 
-              <button id={style.login} onClick={handleLogin}>Login</button>
+                       <NavLink id={style.goBackLink} exact to="/"> Quay lại</NavLink>
+                       <button id={style.login} onClick={handleLogin}>Login</button>
+                   </div>
+               </div>
+           </div>
+          </>
 
-
-              <div id={style.signup}>
-                  New to Portal?  <NavLink exact to="/StudentSignup"> Register</NavLink>
-                  <NavLink id={style.goBackLink} exact to="/"> Go Back</NavLink>
-              </div>
-
-
-          </div>
-        );
+       ); 
    }
 
    export default StudentLogin;
