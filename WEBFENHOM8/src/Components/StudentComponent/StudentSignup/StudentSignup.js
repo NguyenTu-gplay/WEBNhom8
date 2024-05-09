@@ -1,107 +1,95 @@
 
 
- import { NavLink , useHistory } from "react-router-dom";
+import { NavLink , useHistory } from "react-router-dom";
 
- import axios from "axios";
- import { useState } from "react";
+import axios from "axios";
+import { useState } from "react";
 
 
-  import style from "./StudentSignup.module.css";
+ import style from "./StudentSignup.module.css";
 
-  import baseUrl from "../../baseUrl";
+ import baseUrl from "../../baseUrl";
+ import React, { Component }  from 'react';
 
 
 function StudentSignup() {
 
-     const [userData , setUserData] = useState({
-        name: "",
-        email: "",
-        password: ""
-     });
+    const [userData , setUserData] = useState({
+       name: "",
+       email: "",
+       password: ""
+    });
 
-     function onTextFieldChange(e){
-         setUserData({
-             ...userData,
-             [e.target.name] : e.target.value
-         });
-     }
-
-
-      const [password , setPassword] = useState("");
-
-      function handlePassword(e){
-        setPassword(e.target.value);
-    }
-    
-
-    let history = useHistory();
-    
-   async function handleSignup(){
-        // console.log(userData);
-        // console.log(password);
-
-        if(userData.password === password)
-        {
-            await axios.post(`${baseUrl}/user` , userData);
-            alert("Your account has created");
-            alert("Please Login");
-            history.push("/StudentLogin");
-        }
-        else alert("password did not match");
+    function onTextFieldChange(e){
+        setUserData({
+            ...userData,
+            [e.target.name] : e.target.value
+        });
     }
 
 
+     const [password , setPassword] = useState("");
 
-    return (
-        <div id={style.container}>
+     function handlePassword(e){
+       setPassword(e.target.value);
+   }
+   
 
-            <div id={style.formHeading}>
-                <h1>Student Signup</h1>
-                <p>Please complete the form below to register with us</p>
-            </div>
+   let history = useHistory();
+   
+  async function handleSignup(){
+       // console.log(userData);
+       // console.log(password);
 
-            <div id={style.nameBox}>
-                <label htmlFor="name">Name 
-                    <input onChange={(e) => onTextFieldChange(e)} 
-                    type="text" name="name"  required />
-                </label>
-            </div>
-
-
-            <div id={style.emailBox}>
-                <label htmlFor="email"> Email
-                    <input onChange={(e) => onTextFieldChange(e)}  
-                    type="text" name="email" required />
-                </label>
-            </div>
-
-            <div id={style.passwordBox}>
-                <label htmlFor="password"> Password
-                    <input onChange={(e) => onTextFieldChange(e)} 
-                    type="password" name="password" required />
-                </label>
-            </div>
+       if(userData.password === password)
+       {
+           await axios.post(`${baseUrl}/user` , userData);
+           alert("Your account has created");
+           alert("Please Login");
+           history.push("/StudentLogin");
+       }
+       else alert("password did not match");
+   }
 
 
-            <div id={style.confirmPasswordBox}>
-                <label htmlFor="confirmPassword">Confirm Password
-                    <input  onChange={(e) => handlePassword(e)}
-                     type="password" name="confirmPassword" required />
-                </label>
-            </div>
+
+   return (
+       <>
+       <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet"></link><div id={style.boxForm}>
+           <div id={style.boxFormLeft}>
+               <div id={style.boxFormLeftOverlay}></div>
+           </div>
 
 
-            {/* <button id={style.signup} onclick="signup()">Sign Up</button> */}
-            <button id={style.signup} onClick={handleSignup} >Sign Up</button>
+           <div id={style.boxFormRight}>
+               <h5>Đăng Ký</h5>
+               <form id={style.signInForm}>
+                   <div class="inputs">
+                       <input type="text" placeholder="Tên"
+                           onChange={(e) => onTextFieldChange(e)} id={style.email} name="name" required></input>
+                    
+                       <input type="text" placeholder="Tên đăng nhập"
+                           onChange={(e) => onTextFieldChange(e)} id={style.email} name="email" require></input>
+                    
+                       <input type="password" placeholder="Mật khẩu"
+                           onChange={(e) => onTextFieldChange(e)} id={style.password} name="password" required></input>
+                    
+                       <input type="password" placeholder="Nhập lại mật khẩu"
+                          onChange={(e) => handlePassword(e)} name="confirmPassword" required id={style.password}></input>
+                   </div>
 
+                   <br></br>
 
-            <div id={style.login}>
-                Have a Account?  <NavLink exact to="/StudentLogin"> Log in</NavLink>
-            </div>
-
-
-        </div>
-    );
+                   <button type="submit" onClick={handleSignup}>Đăng Ký </button>
+                   <div id={style.login}>
+                       Đã có tài khoản?  <NavLink exact to="/StudentLogin"> Đăng nhập</NavLink>
+                   </div>
+               </form>
+           </div>
+       </div>
+       
+       </>
+   );
 }
 
 export default StudentSignup;
