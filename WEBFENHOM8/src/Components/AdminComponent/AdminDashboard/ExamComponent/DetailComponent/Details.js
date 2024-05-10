@@ -16,11 +16,12 @@
         const [exam  , setExam] = useState({
             name:"",
             desc:"",
-            level:"",
-            passMarks:"",
-            totalQuestion:"",
+            date: "",
             marks:"",
-            date: ""
+            totalQuestion:"",
+            passMarks:"",
+            level:"",
+            totalTime: ""
         });
 
         useEffect(() => {
@@ -28,6 +29,7 @@
              async function getExamDetails(){
                 const value = await axios.get(`${baseUrl}/exam/${id}`);
                 setExam(value.data);
+                console.log(value.data);
              }
              getExamDetails();
         },[id])
@@ -35,7 +37,11 @@
    // -------------------------Go back function---------------------------------------
      
       let history = useHistory();
-    
+      const formatTime = (time) => {
+         const minutes = Math.floor(time / 60);
+         const seconds = time % 60;
+         return `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+     };
       function handleGoBack(){
           history.push("/AdminDashboard/Exam");
       }
@@ -66,8 +72,8 @@
                                </tr>
 
                                <tr>
-                                  <th id={style.center}>Exam TotalMarks</th>
-                                  <td id={style.center}> {exam.marks} </td>
+                                  <th id={style.center}>Exam TotalTime</th>
+                                  <td id={style.center}> {formatTime(exam.totalTime)} </td>
                                </tr>
 
                                <tr>

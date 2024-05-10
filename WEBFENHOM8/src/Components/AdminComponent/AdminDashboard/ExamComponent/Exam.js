@@ -1,5 +1,5 @@
  
-   import { useState ,useEffect} from "react";
+   import { useState ,useEffect, useRef} from "react";
    import axios from "axios";
 
    import {NavLink} from "react-router-dom";
@@ -15,7 +15,7 @@
         const [display , setDisplay]  = useState({
             display:"none"
         });
-
+        const nameFieldRef = useRef(null);
          function handleAddExam()
          {
             setDisplay({display:"block"});
@@ -50,11 +50,12 @@
       const [exam , setExam] = useState({
         name:"",
         desc:"",
-        level:"",
-        passMarks:"",
+        date: d+" "+t,
+        marks:"10",
         totalQuestion:"",
-        marks:"",
-        date: d+" "+t
+        passMarks:"5",
+        level:"",
+        total_time: 900
     });
    
    function handleInput(e){
@@ -62,7 +63,7 @@
             ...exam,
             [e.target.name]: e.target.value
         });
-        // console.log(exam);
+        console.log(exam);
     }
 
     async function handleAddNewExam(){
@@ -70,7 +71,7 @@
         setExam(
             exam.name = {name: document.getElementById("nameFiled").value}
         );
-
+        
         await axios.post(`${baseUrl}/exam` , exam);
         setStatus(true);
     }
@@ -168,7 +169,7 @@
 
                   <div id={style.addBox} style={display}>   
                      <label htmlFor="">Enter Subject Name </label>
-                     <input id="nameFiled" onChange={(e) => handleInput(e)} name="name" type="text" 
+                     <input ref={nameFieldRef} id="nameFiled" onChange={(e) => handleInput(e)} name="name" type="text" 
                      placeholder="Enter Subject Name" /> 
 
                      <label htmlFor="">Enter Exam desc </label>
@@ -179,20 +180,15 @@
                       <input onChange={(e) => handleInput(e)} name="level"   type="text" placeholder="Enter Exam Level" /> 
 
                       <label htmlFor="">Enter Total Question </label>
-                      <input onChange={(e) => handleInput(e)} name="totalQuestion"   
-                      type="text" placeholder="Enter Total Question" /> 
+                      <input onChange={(e) => handleInput(e)} name="totalQuestion"  type="text" 
+                      placeholder="Enter Total Question" /> 
 
-                     <label htmlFor="">Enter Total Marks </label>
-                      <input onChange={(e) => handleInput(e)} name="marks"   
-                      type="text" placeholder="Enter Total Marks" /> 
-
-                     <label htmlFor="">Enter Pass Marks </label>
-                     <input onChange={(e) => handleInput(e)} name="passMarks"   
-                     type="text" placeholder="Enter Pass Marks" /> 
+                    <label htmlFor="">Enter Time </label>
+                     <input onChange={(e) => handleInput(e)} name="totalTime"   type="text" placeholder="Enter Time" /> 
 
                       <div id={style.buttonBox}>
                          <button onClick={handleAddNewExam} >Add</button>
-                         <button onClick= {handleCloseExam}  >Close</button>
+                         <button onClick= {handleCloseExam} >Close</button>
                        </div>
                   </div>
             </>

@@ -17,14 +17,13 @@ function Test() {
 
     const [allQuestions , setAllQuestions] = useState([]);
     const [remainingTime, setRemainingTime] = useState();
-    let timeAll = useState();
+    const [timeAll, setTimeAll] = useState(0);
     useEffect(() => {
         async function getExamTotalTime() {
           try {
             const response = await axios.get(`${baseUrl}/exam/${id}`);
             const totalTime = response.data.totalTime;
-            timeAll = totalTime;
-            console.log(timeAll);
+            setTimeAll(totalTime);
             setRemainingTime(totalTime);
           } catch (error) {
             console.error("Error fetching exam total time:", error);
@@ -143,7 +142,7 @@ function Test() {
             "totalTime": timeAll - remainingTime
         };
 
-       //console.log(data);
+       console.log(timeAll-remainingTime);
  
        await axios.post(`${baseUrl}/result` , data);
         history.push("/StudentDashboard/Result");

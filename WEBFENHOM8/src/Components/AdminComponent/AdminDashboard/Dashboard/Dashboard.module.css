@@ -19,7 +19,10 @@
     margin-left: 10px;
     color: white;
 }
-
+#boxContainer {
+    display: flex;
+    justify-content: center;
+  }
 
 #box1,
 #box3{
@@ -53,7 +56,10 @@
    font-family: 'Times New Roman', Times, serif;
 }
 
-
+#boxContainer {
+    display: flex;
+    justify-content: center;
+  }
  
 
 #box1 button:hover,
