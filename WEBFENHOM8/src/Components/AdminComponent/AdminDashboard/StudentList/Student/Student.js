@@ -45,8 +45,9 @@
         }
 
          return (
-              <>
-               <div id={style.displayHeadingBox}> 
+            <>
+            <div id = {style.rightcontainer}> 
+                <div id={style.displayHeadingBox}> 
                    <h2>Student Exam List</h2>     
                 </div>
 
@@ -85,10 +86,11 @@
                      </table>
                 </div>
 
-                 <div id={style.addSubjectBox}>
+                <div id={style.addSubjectBox}>
                        <button onClick={handleGoBack}>Go Back</button>
-                 </div>
-              </>
+                </div>
+            </div>
+            </>
          );
      }
 

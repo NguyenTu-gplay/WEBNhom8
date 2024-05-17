@@ -55,6 +55,7 @@ import baseUrl from "../../../../baseUrl";
 
           return (
               <>
+              <div id = {style.rightcontainer}>
                 <div id={style.displayHeadingBox}> 
                             <h2>Adding Question</h2>     
                          </div>
@@ -102,6 +103,7 @@ import baseUrl from "../../../../baseUrl";
                        </div>
 
                    </div>
+              </div>
               </>
           );
       }

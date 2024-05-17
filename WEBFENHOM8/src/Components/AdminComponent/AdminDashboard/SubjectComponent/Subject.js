@@ -113,7 +113,8 @@ import style from "./Subject.module.css";
          return(
              <>
             
-            <div id={style.content}>
+            <div id = {style.rightcontainer}> 
+                <div id={style.content}>
 
                   <div id={style.displayHeadingBox}> 
                       <h2>Subject List</h2>     
@@ -162,8 +163,8 @@ import style from "./Subject.module.css";
                         </div>
                    </div>
                    
+                </div>
             </div>
-
 
 
                  

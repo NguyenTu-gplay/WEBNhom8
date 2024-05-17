@@ -22,7 +22,11 @@ function Exam() {
         }
         getAllExams();
     }, [])
-
+    const formatTime = (time) => {
+        const minutes = Math.floor(time / 60);
+        const seconds = time % 60;
+        return `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+    };
     return (
         <>
             <div id={style.displayBoxHeadingBox}>
@@ -35,13 +39,13 @@ function Exam() {
                         <div id={style.displayBoxExamBox} key={i}>
                             <div id={style.div1}>
                                 <div id={style.div2}> <span>Exam Description: {data.desc}</span> </div>
-                                <div id={style.div3}><span>Total Question:{data.question}</span> </div>
-                                <div id={style.div4}><span>Total Time:{data.time}</span></div>
+                                <div id={style.div3}><span>Total Question:{data.totalQuestion}</span> </div>
+                                <div id={style.div4}><span>Total Time:{formatTime(data.totalTime)}</span></div>
                             </div>
                             <div id={style.div5}>
                                 <NavLink exact to={`/StudentDashboard/Exam/${data.name.name}/${data.id}`}>
-                                 <button>Go to Exam</button>
-                               </NavLink>
+                                <button>Go to Exam</button>
+                            </NavLink>
                             </div>
                         </div>
                     );

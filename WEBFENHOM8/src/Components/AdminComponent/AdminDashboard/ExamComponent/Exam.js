@@ -115,9 +115,10 @@
 
         return (
             <>
-               <div id={style.displayHeadingBox}> 
+            <div id = {style.rightbox}>
+                <div id={style.displayHeadingBox}> 
                     <h2>Exam List</h2>     
-               </div>
+                </div>
 
                 <div id={style.tableBox}>
                     <table >
@@ -161,13 +162,13 @@
                               
                           </tbody>
                      </table>
-                 </div>
+                </div>
 
-                 <div id={style.addSubjectBox}>
+                <div id={style.addSubjectBox}>
                       <button onClick={handleAddExam}>Add Exam</button>
-                 </div>
+                </div>
 
-                  <div id={style.addBox} style={display}>   
+                <div id={style.addBox} style={display}>   
                      <label htmlFor="">Enter Subject Name </label>
                      <input ref={nameFieldRef} id="nameFiled" onChange={(e) => handleInput(e)} name="name" type="text" 
                      placeholder="Enter Subject Name" /> 
@@ -190,7 +191,8 @@
                          <button onClick={handleAddNewExam} >Add</button>
                          <button onClick= {handleCloseExam} >Close</button>
                        </div>
-                  </div>
+                </div>
+            </div>
             </>
         );
     }

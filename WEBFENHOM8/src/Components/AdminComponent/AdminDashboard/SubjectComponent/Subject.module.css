@@ -1,4 +1,31 @@
- 
+#rightcontainer 
+{
+    background-color: white;
+    border-radius: 10px;
+    width: 83vmax;
+    height: 42vmax;
+    margin-left: 1vmax;
+    margin-top: 1vmax;
+} 
+#rightcontainermove
+{
+    background-color: white;
+    border-radius: 10px;
+    width: 83vmax;
+    height: 60vmax;
+    margin-left: 1vmax;
+    margin-top: 1vmax;
+    overflow-y: hidden;
+} 
+#rightbox
+{
+    background-color: white;
+    border-radius: 10px;
+    width: 83vmax;
+    height: 42vmax;
+    margin-left: 1vmax;
+    margin-top: 1vmax;
+} 
 
   
   #displayHeadingBox h2{

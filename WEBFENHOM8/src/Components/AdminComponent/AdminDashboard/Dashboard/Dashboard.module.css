@@ -2,7 +2,15 @@
 
 
 
-
+#rightcontainer 
+{
+    background-color: white;
+    border-radius: 10px;
+    width: 83vmax;
+    height: 42vmax;
+    margin-left: 1vmax;
+    margin-top: 1vmax;
+}
 #displayHeadingBox h1{
     margin-left: 10px;
    display: inline-block;

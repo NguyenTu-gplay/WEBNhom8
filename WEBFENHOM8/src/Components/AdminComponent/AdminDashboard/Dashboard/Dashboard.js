@@ -56,6 +56,7 @@
 
          return(
              <>
+             <div id = {style.rightcontainer}>
                            <div id={style.displayHeadingBox}> 
                                <h1>Dashboard</h1>     
                            </div>
@@ -75,7 +76,7 @@
                                         <button onClick={showUsers} >View Details</button>
                                 </div>
                             </div>
-                             
+            </div>  
              </>
          );
      }

@@ -121,6 +121,7 @@
 
          return (
              <>
+             <div id ={style.rightcontainer}>
                 <div id={style.displayHeadingBox}> 
                             <h2>Question List</h2>     
                          </div>
@@ -216,6 +217,7 @@
                          <button onClick={handleClose} >Close</button>
                        </div>
                    </div>
+                </div>
              </>
          );
      }

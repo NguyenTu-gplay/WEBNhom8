@@ -49,6 +49,7 @@
 
       return (
             <>
+            <div id = {style.rightcontainer}>
                <div id={style.displayHeadingBox}> 
                      <h2>Exam Details</h2>     
                </div>
@@ -97,6 +98,7 @@
                   <div id={style.addSubjectBox}>
                      <button onClick={handleGoBack}>Go Back</button>
                   </div>
+            </div>
             </>
       );
    }

@@ -26,11 +26,12 @@
 
           return (
               <>
-                  <div id={style.displayHeadingBox}> 
+                <div id = {style.rightcontainermove}> 
+                    <div id={style.displayHeadingBox}> 
                       <h2>Question List</h2>     
-                   </div>
+                    </div>
 
-                   <div id={style.tableBox}>
+                    <div id={style.tableBox}>
                       <table>
                          <thead>
                            <tr>
@@ -62,7 +63,8 @@
                                
                         </tbody>
                       </table>
-                   </div>
+                    </div>
+                </div>
               </>
           );
       }
